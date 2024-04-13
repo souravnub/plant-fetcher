@@ -16,35 +16,8 @@ export function Navbar() {
                         <MountainIcon className="h-6 w-6" />
                         <span className="sr-only">Acme Inc</span>
                     </Link>
-                    <nav className="hidden md:flex gap-4">
-                        <Link
-                            className="font-medium flex items-center text-sm transition-colors hover:underline"
-                            href="#">
-                            Home
-                        </Link>
-                        <Link
-                            className="font-medium flex items-center text-sm transition-colors hover:underline"
-                            href="#">
-                            About
-                        </Link>
-                        <Link
-                            className="font-medium flex items-center text-sm transition-colors hover:underline"
-                            href="#">
-                            Services
-                        </Link>
-                        <Link
-                            className="font-medium flex items-center text-sm transition-colors hover:underline"
-                            href="#">
-                            Contact
-                        </Link>
-                    </nav>
-                    <div className="flex items-center gap-4">
-                        <ThemeToggle />
-                        <Button size="sm" variant="outline">
-                            Sign in
-                        </Button>
-                        <Button size="sm">Sign up</Button>
-                    </div>
+
+                    <ThemeToggle />
                 </div>
             </div>
         </nav>
