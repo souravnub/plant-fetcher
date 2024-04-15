@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/pagination";
 import { useSearchParams, useRouter } from "next/navigation";
 
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
-const CustomPagination = ({ pageCount }) => {
+const CustomPagination = ({ baseUrl, pageCount }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -21,14 +21,14 @@ const CustomPagination = ({ pageCount }) => {
         if (Number(page) - 1 <= 0) {
             return;
         }
-        router.push(`/?page=${Number(page) - 1}`);
+        router.push(`${baseUrl}/?page=${Number(page) - 1}`);
     }
     function handleNext(e) {
         e.preventDefault();
         if (Number(page) + 1 > pageCount) {
             return;
         }
-        router.push(`/?page=${Number(page) + 1}`);
+        router.push(`${baseUrl}/?page=${Number(page) + 1}`);
     }
     return (
         <Pagination>

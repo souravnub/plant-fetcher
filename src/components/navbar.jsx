@@ -7,15 +7,27 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ui/theme-toggle";
 
+function NavLink({ href, children }) {
+    return (
+        <Link className="hover:underline" href={href}>
+            {children}
+        </Link>
+    );
+}
+
 export function Navbar() {
     return (
         <nav className="fixed inset-x-0 top-0 z-50 bg-white shadow-sm dark:bg-gray-950/90">
             <div className="w-full max-w-7xl mx-auto px-4">
                 <div className="flex justify-between h-14 items-center">
-                    <Link className="flex items-center" href="#">
+                    <Link className="flex items-center" href="/">
                         <MountainIcon className="h-6 w-6" />
-                        <span className="sr-only">Acme Inc</span>
+                        <span className="sr-only">Plants fetcher</span>
                     </Link>
+
+                    <div className="flex gap-2 mx-auto px-3">
+                        <NavLink href="/plants">Plants</NavLink>
+                    </div>
 
                     <ThemeToggle />
                 </div>
