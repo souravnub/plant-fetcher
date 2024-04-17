@@ -24,7 +24,7 @@ const SearchPage = async ({ searchParams }) => {
     return (
         <>
             <h1 className="font-medium text-2xl text-center">
-                Search results for "{q}"
+                Search results for &quot;{q}&quot;
             </h1>
             <Link href="/plants" className="my-3 underline text-center block">
                 Back to plants page
